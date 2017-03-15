@@ -1,5 +1,6 @@
 package graph;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -28,6 +29,16 @@ public class UndirectedGraph implements IUndirectedGraph {
     @Override
     public List<Node> getAdjNodes(Node _n) {
         return g.getAdjNodes(_n);
+    }
+
+    @Override
+    public Iterator<Node> creerBFSIterator(Node n) {
+        return null;
+    }
+
+    @Override
+    public Iterator<Node> creerDFSIterator(Node n) {
+        return null;
     }
 
     /**

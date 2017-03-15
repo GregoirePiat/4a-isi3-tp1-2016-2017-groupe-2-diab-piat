@@ -9,7 +9,7 @@ public class Graph implements IDirectedGraph {
 	/**
 	 * A chaque cle=noeud est associe la liste des arcs sortants de ce noeud
 	 */
-	private Map<Node,List<Arc>> adjacence; 
+	private Map<Node,List<Arc>> adjacence;
 	
 	public Graph(){
 		
@@ -75,10 +75,19 @@ public class Graph implements IDirectedGraph {
 				.map(Arc::getDestination)
 				.collect(Collectors.toList());
 	}
-	
-	
 
-	@Override
+    @Override
+    public Iterator<Node> creerBFSIterator(Node n) {
+        return null;
+    }
+
+    @Override
+    public Iterator<Node> creerDFSIterator(Node n) {
+        return null;
+    }
+
+
+    @Override
 	public String toString() {
 
 		StringBuilder sb = new StringBuilder();
