@@ -44,16 +44,16 @@ public class Graph implements IDirectedGraph {
 			adjacence.get(_edge.getSource()).add(_edge);
 	
 	}
-	
-	public Set<Node> getAllNodes(){
 
-		return this.adjacence.keySet();
-	}
+    public Set<Node> getAllNodes(){
+
+        return this.adjacence.keySet();
+    }
 	
 	public int getNbNodes(){
 		//A COMPLETER
-		
-		return 0;
+
+		return this.getAllNodes().size();
 	}
 	
 	/**
@@ -65,12 +65,22 @@ public class Graph implements IDirectedGraph {
 		
 		return adjacence.get(_n);
 	}
+
 	/**
 	 * renvoie tous les noeuds qui sont destination d'un arc dont la source est _n
 	 */
 	public List<Node> getAdjNodes(Node _n){
 		//A COMPLETER
-		return null;
+
+		List<Arc> arcs = this.getArc(_n);
+		return arcs.stream().map(arc -> arc.getDestination()).collect(Collectors.toList());
+
+		List<Node> list = new ArrayList<Node>();
+		for (Arc _a : arcs) {
+			list.add(_a.getDestination());
+		}
+
+		return list;
 	}
 	
 	
