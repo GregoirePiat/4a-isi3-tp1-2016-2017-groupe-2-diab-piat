@@ -1,11 +1,7 @@
 package graph;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class Graph implements IDirectedGraph {
@@ -49,17 +45,9 @@ public class Graph implements IDirectedGraph {
 	
 	}
 	
-	public List<Node> getAllNodes(){
-		//A COMPLETER
+	public Set<Node> getAllNodes(){
 
-		List<Node> nodes = new ArrayList<Node>();
-
-		for(Map.Entry<Node, List<Arc>> entry : this.adjacence.entrySet()) {
-			Node nodeItem = entry.getKey();
-			nodes.add(nodeItem);
-		}
-
-		return nodes;
+		return this.adjacence.keySet();
 	}
 	
 	public int getNbNodes(){
