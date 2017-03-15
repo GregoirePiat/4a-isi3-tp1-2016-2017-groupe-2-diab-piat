@@ -51,8 +51,15 @@ public class Graph implements IDirectedGraph {
 	
 	public List<Node> getAllNodes(){
 		//A COMPLETER
-		
-		return null;
+
+		List<Node> nodes = new ArrayList<Node>();
+
+		for(Map.Entry<Node, List<Arc>> entry : this.adjacence.entrySet()) {
+			Node nodeItem = entry.getKey();
+			nodes.add(nodeItem);
+		}
+
+		return nodes;
 	}
 	
 	public int getNbNodes(){
