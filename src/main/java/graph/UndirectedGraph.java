@@ -33,12 +33,12 @@ public class UndirectedGraph implements IUndirectedGraph {
 
     @Override
     public Iterator<Node> creerBFSIterator(Node n) {
-        return null;
+        return g.creerBFSIterator(n);
     }
 
     @Override
     public Iterator<Node> creerDFSIterator(Node n) {
-        return null;
+        return g.creerDFSIterator(n);
     }
 
     /**
