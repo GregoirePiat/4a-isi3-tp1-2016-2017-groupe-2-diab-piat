@@ -10,6 +10,8 @@
 ## Question 2
 *Expliquer le code ajouté et insérer un schéma du patron de conception mis en place*
 
+![Graph dia](http://i.imgur.com/QqD9F5q.png)
+
 ## Question 3
 *Expliquer le code ajouté et insérer un schéma du patron de conception mis en place*
 
