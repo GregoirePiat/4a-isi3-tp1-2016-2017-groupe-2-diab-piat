@@ -70,17 +70,10 @@ public class Graph implements IDirectedGraph {
 	 * renvoie tous les noeuds qui sont destination d'un arc dont la source est _n
 	 */
 	public List<Node> getAdjNodes(Node _n){
-		//A COMPLETER
-
 		List<Arc> arcs = this.getArc(_n);
-		return arcs.stream().map(arc -> arc.getDestination()).collect(Collectors.toList());
-
-		List<Node> list = new ArrayList<Node>();
-		for (Arc _a : arcs) {
-			list.add(_a.getDestination());
-		}
-
-		return list;
+		return arcs.stream()
+				.map(Arc::getDestination)
+				.collect(Collectors.toList());
 	}
 	
 	
