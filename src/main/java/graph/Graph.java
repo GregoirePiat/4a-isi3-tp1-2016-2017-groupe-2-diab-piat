@@ -89,7 +89,6 @@ public class Graph implements IDirectedGraph {
 
     @Override
 	public String toString() {
-
 		StringBuilder sb = new StringBuilder();
 		sb.append("Graph \n");
 

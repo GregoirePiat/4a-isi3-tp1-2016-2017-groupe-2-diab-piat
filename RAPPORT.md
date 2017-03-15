@@ -7,9 +7,43 @@
 ## Question 1
 *Expliquer le code ajouté*
 
+```java
+public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("Graph \n");
+
+    for (Map.Entry<Node, List<Arc>> entry : this.adjacence.entrySet()) {
+        sb.append("[noeud=");
+        Node nodeItem = entry.getKey();
+        List<Arc> arcs = entry.getValue();
+        /* Append node label */
+        sb.append(nodeItem.toString());
+        sb.append(" :");
+
+        if (arcs.size() == 0)
+            sb.append(" [] ");
+        else {
+            /* Append arcs description */
+            for (Arc arc : arcs)
+                sb.append(" [" + arc.toString() + "] ");
+        }
+        sb.append("\n");
+    }
+
+    return sb.toString();
+}
+```
+
 ## Question 2
 *Expliquer le code ajouté et insérer un schéma du patron de conception mis en place*
-CODE :
+
+Nous avons choisi le Pattern Adapter qui permet d'appeler les méthodes de IGraph déjà codées dans la classe Graph grâce à un attribut privé de type Graph.
+
+***Schéma***
+
+![Graph dia](http://i.imgur.com/QqD9F5q.png)
+
+***Code***
 ```java
 public class UndirectedGraph implements IUndirectedGraph {
     private Graph g;
@@ -61,7 +95,6 @@ public class UndirectedGraph implements IUndirectedGraph {
     }
 }
 ```
-![Graph dia](http://i.imgur.com/QqD9F5q.png)
 
 ## Question 3
 *Expliquer le code ajouté et insérer un schéma du patron de conception mis en place*
