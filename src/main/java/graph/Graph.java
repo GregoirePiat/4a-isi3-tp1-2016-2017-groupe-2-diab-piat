@@ -80,13 +80,28 @@ public class Graph implements IDirectedGraph {
 
 	@Override
 	public String toString() {
-		String s="Graph \n";
-		//A COMPLETER
-		
-		
-		return s;
+
+		StringBuilder sb = new StringBuilder();
+		sb.append("Graph \n");
+
+		for (Map.Entry<Node, List<Arc>> entry : this.adjacence.entrySet()) {
+			sb.append("[noeud=");
+			Node nodeItem = entry.getKey();
+			List<Arc> arcs = entry.getValue();
+			/* Append node label */
+			sb.append(nodeItem.toString());
+			sb.append(" :");
+
+			if (arcs.size() == 0)
+				sb.append(" [] ");
+			else {
+				/* Append arcs description */
+				for (Arc arc : arcs)
+					sb.append(" [" + arc.toString() + "] ");
+			}
+			sb.append("\n");
+		}
+
+		return sb.toString();
 	}
-
-
-	
 }
