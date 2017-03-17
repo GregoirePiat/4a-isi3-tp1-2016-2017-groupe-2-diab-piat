@@ -11,18 +11,32 @@ public class BFSIterator extends GraphIterator {
         this.queue =  new LinkedList();
     }
 
+    @Override
+    public boolean hasNext() {
+        return false;
+    }
+
+    @Override
+    public Node next() {
+        return null;
+    }
+
     public boolean isEmpty() {
         return (this.queue.size() == 0);
     }
 
-    public void enqueue(Node n) {
+    @Override
+    public void addNode(Node n) {
         this.queue.add(n);
     }
 
-    public Node dequeue() {
-        //Node n = this.queue.get(1);
-        //this.queue.remove(1);
-        //return n;
-        return null;
+    @Override
+    public Node removeNode() {
+        if (this.queue.size() != 0) {
+            Node n = this.queue.remove();
+            return n;
+        }
+        else
+            return null;
     }
 }
