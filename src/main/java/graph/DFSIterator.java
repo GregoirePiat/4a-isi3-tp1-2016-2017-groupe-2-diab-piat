@@ -1,7 +1,12 @@
 package graph;
 
-/**
- * Created by Nicolas on 15/03/2017.
- */
+import java.util.*;
+
 public class DFSIterator extends GraphIterator {
+
+    Stack<Node> stack;
+
+    public DFSIterator(IGraph graph, Node nodeStart) {
+        super(graph, nodeStart);
+    }
 }

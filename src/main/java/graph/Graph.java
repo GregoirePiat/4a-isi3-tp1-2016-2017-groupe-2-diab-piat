@@ -78,12 +78,12 @@ public class Graph implements IDirectedGraph {
 
     @Override
     public Iterator<Node> creerBFSIterator(Node n) {
-        return null;
+        return new BFSIterator(this, n);
     }
 
     @Override
     public Iterator<Node> creerDFSIterator(Node n) {
-        return null;
+		return new DFSIterator(this, n);
     }
 
 
