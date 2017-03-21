@@ -101,3 +101,16 @@ public class UndirectedGraph implements IUndirectedGraph {
 
 ## Question 4
 *Expliquer le code ajouté et insérer un schéma du patron de conception mis en place*
+
+Nous traitons les question 3 et 4 à la fois.
+
+***Schéma UML***
+
+Comme vous pouvez le voir sur le schéma ci-dessus, nous avons une classe abstraite GraphIterator qui implémente Iterator de Java. Cette classe possède donc les 2 méthodes cléf de l'Iterator, à savoir :
+- hasNext() qui renvoie un booléen si l'itérateur possède un autre objet (concrètement, si la pile ou la file n'est pas vide)
+- next() qui renvoie le node qui suit
+
+On a ensuite 2 classes filles BFS et DFS qui héritent de GraphIterator. Ce sont ces 2 classes que l'on instanciera. Elles possèdent les méthodes :
+- addNode(Node n) : ajoute un node à la pile/file
+- removeNode() : enlève le premier node de la pile/file et le retourne
+Ces deux classes diffèrent sur un point : leur structure de donnée. DFS possède une file et BFS une file.

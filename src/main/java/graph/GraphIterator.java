@@ -16,7 +16,11 @@ public abstract class GraphIterator implements Iterator<Node> {
     }
 
     @Override
-    public abstract boolean hasNext();
+    public boolean hasNext() {
+        return !this.isEmpty();
+    }
+
+    public abstract boolean isEmpty();
 
     @Override
     public Node next() {

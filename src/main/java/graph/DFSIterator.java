@@ -12,11 +12,6 @@ public class DFSIterator extends GraphIterator {
         this.addNode(nodeStart);
     }
 
-    @Override
-    public boolean hasNext() {
-        return !this.isEmpty();
-    }
-
     public boolean isEmpty() {
         return this.stack.isEmpty();
     }
