@@ -9,16 +9,16 @@ public class DFSIterator extends GraphIterator {
     public DFSIterator(IGraph graph, Node nodeStart) {
         super(graph, nodeStart);
         this.stack = new Stack<Node>();
+        this.addNode(nodeStart);
     }
 
     @Override
     public boolean hasNext() {
-        return false;
+        return !this.isEmpty();
     }
 
-    @Override
-    public Node next() {
-        return null;
+    public boolean isEmpty() {
+        return this.stack.isEmpty();
     }
 
     @Override
@@ -28,9 +28,6 @@ public class DFSIterator extends GraphIterator {
 
     @Override
     public Node removeNode() {
-        if (this.stack.size() != 0)
-            return this.stack.pop();
-        else
-            return null;
+        return this.stack.pop();
     }
 }

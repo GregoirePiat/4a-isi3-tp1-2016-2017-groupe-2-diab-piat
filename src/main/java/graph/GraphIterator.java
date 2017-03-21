@@ -12,6 +12,7 @@ public abstract class GraphIterator implements Iterator<Node> {
         this.setGraph(graph);
         this.setNodeStart(nodeStart);
         this.markedNodes = new ArrayList<>();
+        this.markNode(nodeStart);
     }
 
     @Override
@@ -21,8 +22,9 @@ public abstract class GraphIterator implements Iterator<Node> {
     public Node next() {
         Node n = this.removeNode();
         for (Node child : this.getGraph().getAdjNodes(n)) {
-            if(!isMarked(child)) {
+            if(!this.isMarked(child)) {
                 this.addNode(child);
+                this.markNode(child);
             }
         }
         return n;

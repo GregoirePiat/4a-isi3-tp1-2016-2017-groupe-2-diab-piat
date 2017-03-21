@@ -9,20 +9,16 @@ public class BFSIterator extends GraphIterator {
     public BFSIterator(IGraph graph, Node nodeStart) {
         super(graph, nodeStart);
         this.queue =  new LinkedList();
+        this.addNode(nodeStart);
     }
 
     @Override
     public boolean hasNext() {
-        return false;
-    }
-
-    @Override
-    public Node next() {
-        return null;
+        return !this.isEmpty();
     }
 
     public boolean isEmpty() {
-        return (this.queue.size() == 0);
+        return this.queue.isEmpty();
     }
 
     @Override
@@ -32,11 +28,6 @@ public class BFSIterator extends GraphIterator {
 
     @Override
     public Node removeNode() {
-        if (this.queue.size() != 0) {
-            Node n = this.queue.remove();
-            return n;
-        }
-        else
-            return null;
+        return this.queue.remove();
     }
 }
