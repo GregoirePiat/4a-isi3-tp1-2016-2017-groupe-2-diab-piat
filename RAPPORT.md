@@ -105,7 +105,7 @@ public class UndirectedGraph implements IUndirectedGraph {
 Nous traitons les question 3 et 4 à la fois.
 
 ***Schéma UML***
-![Graph dia](http://imgur.com/a/T5x13)
+![Graph dia](http://i.imgur.com/Fxa39MS.png)
 
 
 Comme vous pouvez le voir sur le schéma ci-dessus, nous avons une classe abstraite GraphIterator qui implémente Iterator de Java. Cette classe possède donc les 2 méthodes cléf de l'Iterator, à savoir :
