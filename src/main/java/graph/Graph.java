@@ -104,8 +104,12 @@ public class Graph implements IDirectedGraph {
 				sb.append(" [] ");
 			else {
 				/* Append arcs description */
-				for (Arc arc : arcs)
-					sb.append(" [" + arc.toString() + "] ");
+				for (Arc arc : arcs){
+					sb.append(" [");
+					sb.append(arc.toString());
+					sb.append(" ");
+				}
+
 			}
 			sb.append("\n");
 		}
