@@ -1,4 +1,4 @@
-package graph;
+package graph.Structure;
 
 public class DoubleLabel  implements Label {
 	double label;

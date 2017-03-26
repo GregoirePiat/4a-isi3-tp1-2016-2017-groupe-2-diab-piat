@@ -1,4 +1,4 @@
-package graph;
+package graph.Structure;
 
 /**
  * Classe representant une arrete orientee et valuee
