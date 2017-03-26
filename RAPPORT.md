@@ -41,7 +41,7 @@ Nous avons choisi le Pattern Adapter qui permet d'appeler les méthodes de IGrap
 
 ***Schéma***
 
-![Graph dia](http://i.imgur.com/QqD9F5q.png)
+![Graph dia](https://github.com/PolytechLyon/4a-isi3-tp1-2016-2017-groupe-2-diab-piat/blob/master/diagram1.png)
 
 ***Code***
 ```java
