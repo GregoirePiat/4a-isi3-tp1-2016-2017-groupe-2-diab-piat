@@ -1,4 +1,4 @@
-package graph;
+package graph.Structure;
 
 public class IntegerLabel implements Label {
 	int label;

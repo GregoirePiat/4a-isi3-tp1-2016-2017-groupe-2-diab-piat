@@ -1,4 +1,6 @@
-package graph;
+package graph.Search;
+
+import graph.Structure.Node;
 
 import java.util.Iterator;
 import java.util.List;

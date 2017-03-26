@@ -1,4 +1,4 @@
-package graph;
+package graph.Structure;
 
 public interface Label {
 	public Object getLabel() ;

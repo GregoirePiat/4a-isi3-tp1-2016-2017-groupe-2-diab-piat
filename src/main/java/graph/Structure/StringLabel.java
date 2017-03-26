@@ -1,4 +1,6 @@
-package graph;
+package graph.Structure;
+
+import graph.Structure.Label;
 
 public class StringLabel  implements Label {
 	String label;
